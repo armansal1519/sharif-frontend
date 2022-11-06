@@ -1,0 +1,21 @@
+// app global css in SCSS form
+@font-face {
+  font-family: "dana VF";
+  src: url("./fonts/danawebGX.woff") format("woff-variations"),
+    /* will be the standard and works in Safari now */
+      url("./fonts/danawebGX.woff") format("woff");
+  /* for the other supporting browsers */
+  font-display: fallback;
+}
+@font-face {
+  font-family: dana;
+  src: url("./fonts/dana-regular.woff") format("woff");
+}
+@font-face {
+  font-family: dana;
+  src: url("./fonts/dana-bold.woff") format("woff");
+  font-weight: 700;
+}
+* {
+  font-family: dana;
+}
