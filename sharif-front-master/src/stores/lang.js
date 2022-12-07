@@ -32,6 +32,17 @@ export const useLangStore = defineStore("lang", {
               },
             ],
           },
+          {
+            title: "پیام ها",
+            icon: "fas fa-grip-vertical",
+            subMenu: [
+              {
+                title: "پبام های ارسال شده برای شما",
+                icon: "far fa-plus-square",
+                link: "msg",
+              },
+            ],
+          },
         ];
 
       return [
@@ -108,7 +119,7 @@ export const useLangStore = defineStore("lang", {
           icon: "fas fa-grip-vertical",
           subMenu: [
             {
-              title: " ایجاد رشته جدید جدید",
+              title: " ایجاد رشته جدید",
               icon: "far fa-plus-square",
               link: "/admin/field/add",
             },

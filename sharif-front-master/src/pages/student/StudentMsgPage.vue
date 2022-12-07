@@ -13,7 +13,7 @@
       "
     >
       <div style="min-width: 200px">
-        {{ msg.receiver_name }}
+        {{ msg.sender_name }}
       </div>
       <div style="min-width: 200px">
         {{ msg.title }}
@@ -22,37 +22,37 @@
       <div style="min-width: 200px">
         {{ msg.text }}
       </div>
-      <div style="min-width: 200px">
+<!--      <div style="min-width: 200px">-->
 
-          <q-icon v-if="msg.is_seen" size="1.8rem" name="done_all"/>
+<!--          <q-icon v-if="msg.is_seen" size="1.8rem" name="done_all"/>-->
 
-          <q-icon v-else size="1.8rem" name="done"/>
+<!--          <q-icon v-else size="1.8rem" name="done"/>-->
 
-      </div>
+<!--      </div>-->
 
 
     </q-card>
   </div>
   <div v-else>
-    <h2>شما پیامی ارسال نکردید</h2>
+    <h2>شما پیامی دریافت نکردید</h2>
   </div>
 </template>
 
 
 <script>
 import {onMounted, ref} from "vue";
-import { api } from "boot/facultyAxios";
+import { api } from "boot/axios";
 
 
 export default {
-  name: "MsgPage",
+  name: "StudentMsgPage.vue",
   setup(){
     const msgList=ref([])
 
 
     const getMsgs = async () => {
-      const resp= await api.get(`/msg/faculty?offset=0&limit=1000`)
-      msgList.value=resp.data
+      const resp= await api.get(`/msg/student?offset=0&limit=1000`)
+      msgList.value=resp.data.msgs
       console.log(resp.data)
     }
 

@@ -145,7 +145,9 @@ export default {
         localStorage.setItem("s-access", resp.data.token);
         localStorage.setItem("s-refresh", resp.data.refresh);
 
+
         await router.push("/student/home");
+        await router.go(0)
       }
     };
 

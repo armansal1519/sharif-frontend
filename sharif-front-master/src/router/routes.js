@@ -21,6 +21,7 @@ const routes = [
       { path: "", component: () => import("pages/student/IndexPage.vue") },
       { path: "home", component: () => import("pages/student/HomePage.vue") },
       { path: "form", component: () => import("pages/student/FormPage.vue") },
+      { path: "msg", component: () => import("pages/student/StudentMsgPage.vue") },
     ],
   },
   { path: "/form/pdf/:id", component: () => import("pages/student/FormPdfPage") },

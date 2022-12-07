@@ -129,7 +129,7 @@ export default {
           color: "green-4",
           textColor: "white",
           icon: "cloud_done",
-          message: "رشته با موفقیت ثبت شد",
+          message: "کاربر با موفقیت ثبت شد",
         });
 
         // faName.value = "";

@@ -75,7 +75,7 @@ export default {
 
     const filed = ref("");
     const { getFields }=storeToRefs(fieldStore)
-
+    console.log("fields",getFields)
     const file = ref();
     const previewList = ref([]);
     const preview = true;
